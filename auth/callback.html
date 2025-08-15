@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8"><title>TikTok OAuth Callback</title></head>
+<body>
+  <h1>Returned from TikTok</h1>
+  <p>If you see this, the redirect works.</p>
+  <script>
+    // Optional: show the code param so you can see it during tests
+    const p = new URLSearchParams(location.search);
+    const code = p.get('code');
+    if (code) document.body.insertAdjacentHTML('beforeend', `<p><b>code:</b> ${code}</p>`);
+  </script>
+</body></html>
